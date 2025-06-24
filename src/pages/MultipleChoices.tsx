@@ -11,8 +11,8 @@ export default function MultipleChoices() {
 
   // Reset loading state when navigating to a new route
   useEffect(()=>{
+    if (location.state?.fromRewending) return; // skip loading if came from Rewending
     setLoading(true);
-
     const timer = setTimeout(()=> {
       setLoading(false);
     },3000 );

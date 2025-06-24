@@ -12,7 +12,7 @@ export default function Rewending() {
   useEffect(()=> {
     if(showLoading){
       const timer = setTimeout(()=> {
-        navigate('Choosing');
+        navigate('Choosing' , {state : {fromRewending: true}});
       }, 3000);
 
       return ()=> clearTimeout(timer);

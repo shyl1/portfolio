@@ -17,6 +17,25 @@ export default function RewindMotion({onComplete}: NotifyTheParentProps) {
 
   const [isHolding , setIsHolding] = useState(false); // for UI only
 
+
+  // audio ref
+  const rewindAudioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Setup audio
+  useEffect(() => {
+    rewindAudioRef.current = new Audio("/sounds/Rewind.mp3");
+    rewindAudioRef.current.loop = true; // loop while holding
+
+    // clean up function to stop the audio when the component unmounts
+    return () => {
+    if (rewindAudioRef.current) {
+      rewindAudioRef.current.pause();
+      rewindAudioRef.current.currentTime = 0;
+      rewindAudioRef.current = null;
+    }
+  };
+  }, []);
+
   // circle moving on the path
   function circleMovement(progress: number){
     const path = pathRef.current; // gets the path ref
@@ -60,7 +79,6 @@ export default function RewindMotion({onComplete}: NotifyTheParentProps) {
       }
       return;
     }
-
     animationRef.current = requestAnimationFrame(animate);
   }
 
@@ -68,12 +86,21 @@ export default function RewindMotion({onComplete}: NotifyTheParentProps) {
   function handleMouseDown() {
     isHoldingRef.current= true;
     setIsHolding(true);
+    // play the rewind audio
+    if (rewindAudioRef.current) {
+      rewindAudioRef.current.currentTime = 0;
+      rewindAudioRef.current.play().catch(console.error);
+    }
   }
 
   // handle release
   function handleMouseUp() {
     isHoldingRef.current = false;
     setIsHolding(false);
+    // stop the rewind audio
+    if (rewindAudioRef.current) {
+      rewindAudioRef.current.pause();
+    }
   }
 
 
