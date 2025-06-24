@@ -17,6 +17,7 @@
       "@routers/*" : ["src/routers/*"],
       "@Types/*": ["src/Types/*"],
       "@UI/*" : ["src/UI/*"],
+      "@Constants/*": ["src/Constants/*",]
     },
 
     /* Bundler mode */

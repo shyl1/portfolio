@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-primary: #000000;
+  --color-secondary: #FFFFFF;
+
+  /* Fonts */
+  --font-heading: "Amatic SC", sans-serif;
+  --font-body: "Tagesschrift", system-ui;
+
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Border Radius */
+  --border-radius-sm: 0.125rem;
+  --border-radius-md: 0.25rem;
+  --border-radius-lg: 0.5rem;
+
+}
+
