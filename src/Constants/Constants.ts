@@ -5,3 +5,5 @@ export const motionPath = "m176.4 174.1c2.3-9.3 14.3-6.9 20.2-3.4 6.8 4.1 6.8 12
 
 export const maxSpeed =  0.0003;
 export const acceleration = 0.000001; // acceleration to increase the speed of the circle
+
+

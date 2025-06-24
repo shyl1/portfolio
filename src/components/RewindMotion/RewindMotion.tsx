@@ -89,8 +89,6 @@ export default function RewindMotion({onComplete}: NotifyTheParentProps) {
   }, []);
 
 
-
-
   return (
     <div className="flex h-screen items-center justify-center flex-col select-none">
       <svg 
