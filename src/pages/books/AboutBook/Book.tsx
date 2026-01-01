@@ -55,7 +55,7 @@ export default function AboutBook() {
             >
                 <HTMLFlipBook
                     style={{}}           // <-- REQUIRED BY TS
-                    size="fixed"
+                    
                     ref={bookRef}
                     className="shadow-2xl rounded"
                     showCover={false}
