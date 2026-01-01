@@ -4,8 +4,6 @@ import Error from "@pages/Error";
 import MultipleChoices from "@pages/MultipleChoices";
 import Rewending from "@pages/Rewending";
 import MainLayout from "@UI/MainLayout";
-import AboutMe from "@pages/AboutMe";
-import Contact from "@pages/Contact";
 import { LoadingProvider } from "@ContextAPI/LoadingContext";
 import AboutBook from "@pages/books/AboutBook/Book";
 import ContactBook from "@pages/books/ContactBook/Book";

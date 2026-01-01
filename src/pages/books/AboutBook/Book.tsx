@@ -7,7 +7,7 @@ import Page1 from "./Page1";
 
 export default function AboutBook() {
     usePageLoading();
-    const bookRef = useRef<any>(null);
+    const bookRef = useRef(null);
     return (
         <>
         <section className="hidden h-screen  md:flex flex-col justify-center items-center bg-[url('/images/multiple-choices-bg.png')] bg-center bg-cover"
