@@ -1,5 +1,5 @@
 import { acceleration, maxSpeed, motionPath } from "@Constants/Constants";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type NotifyTheParentProps ={
   onComplete: () => void;
@@ -51,7 +51,7 @@ export default function RewindMotion({onComplete}: NotifyTheParentProps) {
   }
 
   // animation frame to move the circle along the path
-  function animate(timestamp: number) {
+  const animate = useCallback((timestamp: number) => {
     if(lastTimestampRef.current === null){
       lastTimestampRef.current = timestamp; // initialize the last timestamp
     }
@@ -80,7 +80,9 @@ export default function RewindMotion({onComplete}: NotifyTheParentProps) {
       return;
     }
     animationRef.current = requestAnimationFrame(animate);
-  }
+  } , [onComplete]);
+
+
 
   // handle press
   function handleMouseDown() {
@@ -113,7 +115,7 @@ export default function RewindMotion({onComplete}: NotifyTheParentProps) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, []);
+  }, [animate]);
 
 
   return (

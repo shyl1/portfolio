@@ -6,6 +6,6 @@ import AppRouters from '@routers/AppRouters'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <AppRouters />
+      <AppRouters />
   </StrictMode>,
 )

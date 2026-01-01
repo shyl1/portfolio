@@ -7,6 +7,10 @@ import MainLayout from "@UI/MainLayout";
 import AboutMe from "@pages/AboutMe";
 import Contact from "@pages/Contact";
 import { LoadingProvider } from "@ContextAPI/LoadingContext";
+import AboutBook from "@pages/books/AboutBook/Book";
+import ContactBook from "@pages/books/ContactBook/Book";
+import ProjectBook from "@pages/books/ProjectBook/Book";
+import HobbiesBook from "@pages/books/HobbiesBook/Book";
 
 
 
@@ -22,16 +26,24 @@ const router = createBrowserRouter([
         element: <Rewending />,
       },
       {
-        path: 'Choosing',
+        path: 'choosing',
         element: <MultipleChoices />,
       },
       {
-        path: 'about-me',
-        element: <AboutMe />,
+        path: 'book/about',
+        element: <AboutBook />,
       },
       {
-        path: 'contact',
-        element: <Contact />
+        path: 'book/contact',
+        element: <ContactBook />
+      },
+      {
+        path: 'book/projects',
+        element: <ProjectBook />,
+      },
+      {
+        path: 'bppk/hobbies',
+        element: <HobbiesBook />
       },
     ],
   },

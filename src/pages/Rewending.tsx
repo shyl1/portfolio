@@ -2,6 +2,7 @@ import RewindMotion from "@components/RewindMotion/RewindMotion";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import ButterflyEffect from "src/feedback/ButterflyEffect";
+import rewindBg from '@assets/rewind-bg.png'
 
 export default function Rewending() {
 
@@ -9,10 +10,13 @@ export default function Rewending() {
 
   const navigate = useNavigate();
 
+  
+  
+
   useEffect(()=> {
     if(showLoading){
       const timer = setTimeout(()=> {
-        navigate('Choosing' , {state : {fromRewending: true}});
+        navigate('/choosing' , {state : {fromRewending: true}});
       }, 3000);
 
       return ()=> clearTimeout(timer);
@@ -28,7 +32,8 @@ export default function Rewending() {
   }
 
   return (
-    <section className="bg-[url('/images/rewind-bg.png')] bg-cover bg-center h-screen w-screen flex items-center justify-center">
+    <section className="bg-cover bg-center h-screen w-screen flex items-center justify-center"
+    style={{backgroundImage: `url(${rewindBg})`}}>
       <RewindMotion  onComplete={() => setShowLoading(true)}/>
     </section>
   )
