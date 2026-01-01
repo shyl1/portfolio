@@ -67,9 +67,9 @@ export default function AboutBook() {
                     height={600}
                     mobileScrollSupport={true}
                     /* REQUIRED DIMENSION PROPS */
-                    minWidth={300}
+                    minWidth={350}
                     maxWidth={350}
-                    minHeight={400}
+                    minHeight={600}
                     maxHeight={600}
                     /* REQUIRED EVEN IF UNUSED */
                     drawShadow={true}

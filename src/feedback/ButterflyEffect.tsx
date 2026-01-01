@@ -1,5 +1,6 @@
 import { useEffect } from "react"
 import rewindBg from '@assets/rewind-bg.png'
+import butterflyGif from "@assets/gifs/butterfly.gif"
 
 export default function ButterflyEffect() {
   // add sound effect
@@ -24,7 +25,7 @@ export default function ButterflyEffect() {
     style={{backgroundImage: `url(${rewindBg})`}}>
 
       <div className="mt-3 flex flex-col">
-        <img src="/public/gifs/butterfly.gif" alt="butterfly effect" />
+        <img src={butterflyGif} alt="butterfly effect" />
         <p className="text-xl sm:text-3xl md:text-4xl color-primary font-body animate-pulse ">this action will have consequences</p>
       </div>
     </section>
