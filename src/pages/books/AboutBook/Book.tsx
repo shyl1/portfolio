@@ -16,7 +16,7 @@ export default function AboutBook() {
                     style={{}}
                     size="fixed"
                     ref={bookRef}
-                    className="shadow-2xl rounded"
+                    className="rounded"
                     showCover={false}
                     maxShadowOpacity={0.5}
                     useMouseEvents={true}
@@ -31,14 +31,14 @@ export default function AboutBook() {
                     minHeight={400}
                     maxHeight={600}
                     /* REQUIRED EVEN IF UNUSED */
-                    drawShadow={true}
+                   
                     flippingTime={700}
-                    usePortrait={false}
-                    startZIndex={0}
-                    clickEventForward={true}
-                    swipeDistance={30}
-                    showPageCorners={true}
-                    disableFlipByClick={false}
+                    usePortrait={true}
+                    startZIndex={1}
+                    drawShadow={true}
+                    
+                   
+                  
                 >
                     <div>
                         <Page1 />
@@ -55,31 +55,24 @@ export default function AboutBook() {
             >
                 <HTMLFlipBook
                     style={{}}           // <-- REQUIRED BY TS
-                    
+                    size="fixed"
                     ref={bookRef}
-                    className="shadow-2xl rounded"
+                    className=" rounded"
                     showCover={false}
                     maxShadowOpacity={0.5}
                     useMouseEvents={true}
                     startPage={0}
                     autoSize={true}
                     width={350}
-                    height={600}
+                    height={500}
                     mobileScrollSupport={true}
                     /* REQUIRED DIMENSION PROPS */
                     minWidth={350}
                     maxWidth={350}
-                    minHeight={600}
-                    maxHeight={600}
+                    minHeight={500}
+                    maxHeight={500}
                     /* REQUIRED EVEN IF UNUSED */
-                    drawShadow={true}
-                    flippingTime={700}
-                    usePortrait={false}
-                    startZIndex={0}
-                    clickEventForward={true}
-                    swipeDistance={30}
-                    showPageCorners={true}
-                    disableFlipByClick={false}
+                  
                 >
                     <div>
                         <Page1 />
