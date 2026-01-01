@@ -1,8 +1,10 @@
 import { usePageLoading } from "@hooks/usePageLoading";
-import HTMLFlipBook from "react-pageflip";
+import HTMLFlipBookOriginal from "react-pageflip";
 import { useRef } from "react";
 import Page2 from "./Page2";
 import Page1 from "./Page1";
+
+const HTMLFlipBook: React.FC<any> = HTMLFlipBookOriginal;
 
 
 export default function AboutBook() {
@@ -25,17 +27,6 @@ export default function AboutBook() {
                     width={600}
                     height={600}
                     mobileScrollSupport={true}
-                    /* REQUIRED DIMENSION PROPS */
-                    minWidth={300}
-                    maxWidth={600}
-                    minHeight={400}
-                    maxHeight={600}
-                    /* REQUIRED EVEN IF UNUSED */
-                   
-                    flippingTime={700}
-                    usePortrait={true}
-                    startZIndex={1}
-                    drawShadow={true}
                     
                    
                   
@@ -66,12 +57,6 @@ export default function AboutBook() {
                     width={350}
                     height={500}
                     mobileScrollSupport={true}
-                    /* REQUIRED DIMENSION PROPS */
-                    minWidth={350}
-                    maxWidth={350}
-                    minHeight={500}
-                    maxHeight={500}
-                    /* REQUIRED EVEN IF UNUSED */
                   
                 >
                     <div>
