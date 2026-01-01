@@ -25,6 +25,20 @@ export default function AboutBook() {
                     width={600}
                     height={600}
                     mobileScrollSupport={true}
+                    /* REQUIRED DIMENSION PROPS */
+                    minWidth={300}
+                    maxWidth={600}
+                    minHeight={400}
+                    maxHeight={600}
+                    /* REQUIRED EVEN IF UNUSED */
+                    drawShadow={true}
+                    flippingTime={700}
+                    usePortrait={false}
+                    startZIndex={0}
+                    clickEventForward={true}
+                    swipeDistance={30}
+                    showPageCorners={true}
+                    disableFlipByClick={false}
                 >
                     <div>
                         <Page1 />
@@ -51,8 +65,21 @@ export default function AboutBook() {
                     autoSize={true}
                     width={350}
                     height={600}
-
                     mobileScrollSupport={true}
+                    /* REQUIRED DIMENSION PROPS */
+                    minWidth={300}
+                    maxWidth={350}
+                    minHeight={400}
+                    maxHeight={600}
+                    /* REQUIRED EVEN IF UNUSED */
+                    drawShadow={true}
+                    flippingTime={700}
+                    usePortrait={false}
+                    startZIndex={0}
+                    clickEventForward={true}
+                    swipeDistance={30}
+                    showPageCorners={true}
+                    disableFlipByClick={false}
                 >
                     <div>
                         <Page1 />
