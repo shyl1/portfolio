@@ -47,8 +47,8 @@ export default function AboutBook() {
                 useMouseEvents={true}
                 startPage={0}
                 autoSize={true}
-                 width={300}   // max width
-          height={700}  // max height
+                 width={350}   
+          height={600}  
          
           mobileScrollSupport={true}
             >
