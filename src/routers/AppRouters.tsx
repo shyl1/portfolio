@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <ProjectBook />,
       },
       {
-        path: 'bppk/hobbies',
+        path: 'book/hobbies',
         element: <HobbiesBook />
       },
     ],
