@@ -53,7 +53,7 @@ export default function Page1() {
             <div className="px-3">
                 <Button
                     type="Previous"
-                    action={() => navigate("/book/contact")}
+                    action={() => navigate("/book/hobbies")}
                 />
             </div>
         </div>

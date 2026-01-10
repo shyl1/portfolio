@@ -1,61 +1,62 @@
-
-import aboutMe from "@assets/page2.png"
-import html from "@assets/html 1.webp";
-import javascript from "@assets/javascript 1.webp";
-import typescript from "@assets/typescript 1.webp";
-import Button from "@components/shared/Button";
-import { useNavigate } from "react-router";
-
+import aboutMe from "@assets/page6.webp";
+import sedra from "@assets/sedra.png";
 
 export default function Page3() {
-    const navigate = useNavigate();
+  return (
+    <div
+      className="font-heading h-full w-full flex flex-col justify-start px-3 items-start py-8"
+      style={{
+        backgroundImage: `url(${aboutMe})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        boxShadow: "inset 0 0 20px rgba(0,0,0,0.2)",
+      }}
+    >
+      <a
+        href="https://sedratravelinc.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <h1 className="text-2xl md:text-4xl font-black px-3 text-black mb-2 md:mb-4 underline">
+          Project: Sedra Travel Inc.
+        </h1>
+      </a>
 
-    return (
-        <div
-            className="font-heading flex flex-col justify-start items-start px-3 py-8 h-full w-full"
-            style={{
-                backgroundImage: `url(${aboutMe})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                boxShadow: "inset 0 0 20px rgba(0,0,0,0.2)", // inner shadow for depth
-            }}
-        >
-            <h1 className="text-2xl md:text-4xl font-black text-black mb-2 md:mb-4">My Skills</h1>
+      <div className="flex flex-row justify-between items-start gap-3 w-full">
 
-            <div className="flex flex-col justify-between items-start h-full">
-                <div className="flex flex-wrap">
+        {/* Text Content */}
+        <div className="w-[200px] md:w-full">
+          <h2 className="text-lg md:text-xl font-bold mb-1 md:mb-2">About the Project</h2>
+          <p className="mb-4 font-semibold text-[13px] md:text-lg">
+            Sedra Travel Inc. is a U.S.-based travel company offering curated
+            travel experiences in Egypt for American travelers.
+          </p>
 
-                    <div className="flex flex-col">
-                        <h2 className="text-xl font-bold mt-4">Core Web Technologies</h2>
-                        <div className="flex flex-wrap gap-4 mb-4">
-                            <img src={html} alt="HTML" className="w-20 h-20 md:w-40 md:h-30" />
-                            <img src={javascript} alt="JavaScript" className="w-20 h-20 md:w-40 md:h-30" />
-                            <img src={typescript} alt="TypeScript" className="w-20 h-20 md:w-40 md:h-30" />
-                        </div>
-                    </div>
+          <h2 className="text-lg md:text-xl font-bold mb-1 md:mb-2">My Role</h2>
+          <ul className="list-disc list-inside mb-4 font-semibold text-[13px] md:text-lg">
+            <li>Designed the complete UI/UX for the website</li>
+            <li>Focused on a clear, to-the-point user experience</li>
+            <li>Optimized content structure for American users</li>
+            <li>Prioritized clarity, trust, and fast decision-making</li>
+          </ul>
 
-                    <div className="font-bold font-body">
-                        <p>OOP · Data Structures · Algorithms · Problem Solving</p>
-                    </div>
-
-                    <div className="font-bold font-body">
-                        <h1>Form Handling:</h1>
-                        <p>Formik and validation by Yup </p>
-                    </div>
-                    
-                    <div className="font-bold font-body ml-2">
-                        <h1>UI/UX:</h1>
-                        <p>Figma</p>
-                    </div>
-                </div>
-
-                <div className="flex items-end">
-                    <Button type="Next" action={
-                        () => navigate("/book/projects")
-                    } />
-                </div>
-            </div>
-
+          <h2 className="text-lg md:text-xl font-bold mb-1 md:mb-2">Design Highlights</h2>
+          <ul className="list-disc list-inside font-semibold text-[13px] md:text-lg">
+            <li>Minimal and direct content flow</li>
+            <li>Clear call-to-actions for conversions</li>
+            <li>User-centric layout tailored to U.S. audience expectations</li>
+          </ul>
         </div>
-    )
+
+        {/* Image */}
+        <div className="w-[150px] md:w-[420px]">
+          <img
+            src={sedra}
+            alt="Sedra Travel Inc website preview"
+          />
+        </div>
+
+      </div>
+    </div>
+  );
 }

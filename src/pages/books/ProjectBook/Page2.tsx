@@ -1,13 +1,9 @@
 
-import aboutMe from "@assets/page6.webp"
-import Button from "@components/shared/Button"
-import { useNavigate } from "react-router";
-
-
+import aboutMe from "@assets/page6.webp";
 
 
 export default function Page2() {
-    const navigate = useNavigate();
+
     return (
         <div
             className="font-heading h-full w-full flex flex-col justify-start px-3 items-start py-8"
@@ -54,11 +50,11 @@ export default function Page2() {
             </ul>
 
 
-                    <div className="flex items-end">
+                    {/* <div className="flex items-end">
                         <Button type="Next" action={
                             () => navigate("/book/projects")
                         } />
-                    </div>
+                    </div> */}
                 </div>
 
 

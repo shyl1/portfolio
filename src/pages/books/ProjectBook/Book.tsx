@@ -4,6 +4,8 @@ import HTMLFlipBookOriginal from "react-pageflip";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import Page3 from "./Page3";
+import Page4 from "./Page4";
+import Page5 from "./Page5";
 
 const HTMLFlipBook: React.FC<any> = HTMLFlipBookOriginal;
 
@@ -39,6 +41,13 @@ export default function ProjectBook() {
                         <div>
                             <Page3 />
                         </div>
+
+                        <div>
+                            <Page4 />
+                        </div>
+                        <div>
+                            <Page5 />
+                        </div>
                     </HTMLFlipBook>
     
                 </section>
@@ -72,6 +81,13 @@ export default function ProjectBook() {
     
                         <div>
                             <Page3 />
+                        </div>
+
+                        <div>
+                            <Page4 />
+                        </div>
+                        <div>
+                            <Page5 />
                         </div>
                     </HTMLFlipBook>
     
