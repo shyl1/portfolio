@@ -34,6 +34,7 @@ export default function Page3() {
 
           <h2 className="text-lg md:text-xl font-bold mb-1 md:mb-2">My Role</h2>
           <ul className="list-disc list-inside mb-4 font-semibold text-[13px] md:text-lg">
+            <li>Built the entire frontend using vanilla HTML, CSS, and JavaScript without relying on frontend frameworks</li>
             <li>Designed the complete UI/UX for the website</li>
             <li>Focused on a clear, to-the-point user experience</li>
             <li>Optimized content structure for American users</li>

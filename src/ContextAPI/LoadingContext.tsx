@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 type LoadingContextType = {
   loading: boolean;
@@ -11,7 +11,18 @@ const LoadingContext = createContext<LoadingContextType>({
 });
 
 function LoadingProvider({ children } : { children: React.ReactNode }) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const handleLoad = () => setLoading(false);
+
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
   return (
     <LoadingContext.Provider value={{ loading , setLoading}}>
       {children}
