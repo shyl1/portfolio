@@ -2,36 +2,37 @@ import aboutMe from "@assets/page5.webp";
 import Recipe from "@assets/Journal (1).png";
 import Button from "@components/shared/Button";
 import { useNavigate } from "react-router";
+import LazyBackground from "@components/shared/LazyBackground";
 
 export default function Page1() {
     const navigate = useNavigate();
 
     return (
-        <div
+        <LazyBackground
+            src={aboutMe}
             className="font-heading h-full w-full flex flex-col justify-start items-start py-8"
             style={{
-                backgroundImage: `url(${aboutMe})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 boxShadow: "inset 0 0 20px rgba(0,0,0,0.2)",
             }}
         >
             <a
-                    href="https://new-sys-dev-front.recipe-eg.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    
-                >
-                    <h1 className="text-2xl md:text-4xl font-black px-3 text-black mb-2 md:mb-4 underline">
-                Project: Recipe
-            </h1>
-                </a>
-            
+                href="https://new-sys-dev-front.recipe-eg.com/"
+                target="_blank"
+                rel="noopener noreferrer"
 
-            <img src={Recipe} alt="Recipe Project Screenshot" className="mb-2 md:mb-4" />
+            >
+                <h1 className="text-2xl md:text-4xl font-black px-3 text-black mb-2 md:mb-4 underline">
+                    Project: Recipe
+                </h1>
+            </a>
 
 
-                
+            <img src={Recipe} alt="Recipe Project Screenshot" className="mb-2 md:mb-4" loading="lazy" />
+
+
+
 
             <div className=" p-4  max-w-3xl mx-3 mb-1 md:mb-4">
                 <h2 className="text-lg md:text-xl font-bold mb-2">Overview</h2>
@@ -56,6 +57,6 @@ export default function Page1() {
                     action={() => navigate("/book/hobbies")}
                 />
             </div>
-        </div>
+        </LazyBackground>
     );
 }

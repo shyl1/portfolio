@@ -1,15 +1,14 @@
 import aboutMe from "@assets/page5.webp";
-import Button from "@components/shared/Button";
-import { useNavigate } from "react-router-dom";
+import LazyBackground from "@components/shared/LazyBackground";
 
 export default function Page5() {
-    const navigate = useNavigate();
+
 
     return (
-        <div
+        <LazyBackground
+            src={aboutMe}
             className="font-heading h-full w-full flex flex-col justify-start px-3 items-start py-8"
             style={{
-                backgroundImage: `url(${aboutMe})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 boxShadow: "inset 0 0 20px rgba(0,0,0,0.2)",
@@ -56,14 +55,13 @@ export default function Page5() {
                     </ul>
                 </div>
 
-                <div className="px-3">
+                {/* <div className="px-3">
                     <Button
                         type="Next"
                         action={() => navigate("/book/about")}
                     />
-                </div>
-
+                </div> */}
             </div>
-        </div>
+        </LazyBackground>
     );
 }

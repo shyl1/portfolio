@@ -1,12 +1,13 @@
 import aboutMe from "@assets/page6.webp";
 import sedra from "@assets/sedra.png";
+import LazyBackground from "@components/shared/LazyBackground";
 
 export default function Page3() {
   return (
-    <div
+    <LazyBackground
+      src={aboutMe}
       className="font-heading h-full w-full flex flex-col justify-start px-3 items-start py-8"
       style={{
-        backgroundImage: `url(${aboutMe})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         boxShadow: "inset 0 0 20px rgba(0,0,0,0.2)",
@@ -54,10 +55,11 @@ export default function Page3() {
           <img
             src={sedra}
             alt="Sedra Travel Inc website preview"
+            loading="lazy"
           />
         </div>
 
       </div>
-    </div>
+    </LazyBackground>
   );
 }
