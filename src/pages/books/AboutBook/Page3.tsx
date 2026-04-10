@@ -6,6 +6,12 @@ import typescript from "@assets/typescript 1.webp";
 import Button from "@components/shared/Button";
 import { useNavigate } from "react-router";
 
+  const otherSkills = [
+        "Git",
+        "Reusable Components",
+        "Performance Optimization",
+        "Clean Architecture"
+    ];
 
 export default function Page3() {
     const navigate = useNavigate();
@@ -41,6 +47,13 @@ export default function Page3() {
                     <div className="font-bold font-body">
                         <h1>Form Handling:</h1>
                         <p>Formik and validation by Yup </p>
+                    </div>
+                     <div className="flex flex-wrap gap-2">
+                        {otherSkills.map(skill => (
+                            <p key={skill} className="font-bold font-body">
+                                {skill}
+                            </p>
+                        ))}
                     </div>
                     
                     <div className="font-bold font-body ml-2">
