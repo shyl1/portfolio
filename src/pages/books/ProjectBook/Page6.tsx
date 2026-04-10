@@ -21,22 +21,35 @@ export default function Page6() {
             <div className="flex flex-col  items-start gap-6 w-full">
 
                 <div className="w-full">
-                    <h1 className="text-2xl md:text-3xl font-black px-3 text-black mb-2 md:mb-4 underline">
-                        Project: HR Management Module – Internal System
-                    </h1>
+                    <a
+                        href="https://azzka.app/login"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h1 className="text-2xl md:text-3xl font-black px-3 text-black mb-2 md:mb-4 underline">
+                            Project: Azzka ERP System
+                        </h1>
+                    </a>
+
 
                     <h2 className="text-lg md:text-xl font-bold mb-1">About the Project</h2>
                     <p className="mb-4 font-semibold text-[13px] md:text-lg">
-                        Developed an HR module to handle employee holiday and leave requests within an internal system.
+                        Contributed to building a large-scale ERP system used to manage religious tourism operations, supporting multiple departments with unified workflows.
                     </p>
 
                     <h2 className="text-lg md:text-xl font-bold mb-1">Key Features</h2>
                     <ul className="list-disc list-inside font-semibold text-[13px] md:text-lg">
-                        <li>Implemented employee functionality to submit holiday requests via API-connected employee profiles and view previous and upcoming leaves.</li>
-                        <li>Built admin functionality to view all requests and approve or reject them with a required reason.</li>
-                        <li>Added support for employee warnings (لفت نظر), allowing admins to manage and employees to view them.</li>
-                        <li>Implemented management of holiday and leave types controlled by the admin.</li>
+                        <li>Built modular and reusable UI components to support scalable ERP architecture.</li>
+                        <li>Implemented multi-department workflows including Accounting, HRM, and CRM modules.</li>
+                        <li>Improved UI consistency across modules and reduced code redundancy.</li>
+                        <li>Integrated REST APIs for dynamic data handling across system features.</li>
+                        <li>Optimized state management using Redux Toolkit and React Query.</li>
                     </ul>
+
+                    <h2 className="text-lg md:text-xl font-bold mb-1">Tech Stack</h2>
+                    <p className="font-semibold text-[13px] md:text-lg">
+                        React.js, TypeScript, Redux Toolkit, React Query, Tailwind CSS, REST APIs
+                    </p>
                 </div>
 
                 <div className="px-3">

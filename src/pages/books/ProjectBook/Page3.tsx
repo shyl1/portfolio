@@ -42,12 +42,12 @@ export default function Page3() {
             <li>Prioritized clarity, trust, and fast decision-making</li>
           </ul>
 
-          <h2 className="text-lg md:text-xl font-bold mb-1 md:mb-2">Design Highlights</h2>
+          {/* <h2 className="text-lg md:text-xl font-bold mb-1 md:mb-2">Design Highlights</h2>
           <ul className="list-disc list-inside font-semibold text-[13px] md:text-lg">
             <li>Minimal and direct content flow</li>
             <li>Clear call-to-actions for conversions</li>
             <li>User-centric layout tailored to U.S. audience expectations</li>
-          </ul>
+          </ul> */}
         </div>
 
         {/* Image */}
